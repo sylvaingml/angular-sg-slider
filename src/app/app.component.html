@@ -1,0 +1,40 @@
+<main>
+  <h1>Slider directive</h1>
+
+  <p>Simple slider directive that will work with Chrome.</p>
+
+  <form class="vstack">
+    <label for="minValueId">Lower range value:</label>
+    <input
+      id="minValueId"
+      type="number"
+      name="minValue"
+      [(ngModel)]="minValue"
+    />
+
+    <label for="maxValueId">Higher range value:</label>
+    <input
+      id="minValueId"
+      type="number"
+      name="maxValue"
+      [(ngModel)]="maxValue"
+    />
+
+    <label for="rangeId">Select value in the proposed range:</label>
+    <input
+      id="rangeId"
+      name="rangeSlider"
+      class="range-slider"
+      type="range"
+      [min]="minValue"
+      [max]="maxValue"
+      [(ngModel)]="selectedValue"
+    />
+
+    <div class="form_footer">
+      <strong>
+        Selected value: <var>{{ selectedValue }}</var>
+      </strong>
+    </div>
+  </form>
+</main>
